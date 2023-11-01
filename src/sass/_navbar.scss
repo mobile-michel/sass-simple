@@ -1,0 +1,159 @@
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --active: #484b53;
+    --grey: #85888C;
+}
+
+/* Reset */
+header *, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+body > header {
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--grey);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+/* Logo */
+body > header > a {
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+/* Nav menu */
+
+body > header > nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+body > header > nav > ul a {
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+
+body > header > nav > ul a:hover {
+    background-color: var(--grey);
+}
+
+[aria-current="page"] a {
+    background-color: var(--active);
+}
+
+body > header > nav {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+
+body > header > label {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+
+body > header > label > span {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+body > header > label > span::before,
+body > header > label > span::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+body > header > label > span::before{
+    top: 5px;
+}
+
+body > header > label > span::after{
+    top: -5px;
+}
+
+
+body > header > input {
+    display: none;
+}
+
+/* Toggle menu icon */
+
+body > header > input:checked ~ nav {
+    max-height: 100%;
+}
+
+body > header > input:checked ~ label span {
+    background: transparent;
+}
+
+body > header > input:checked ~ label span::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+body > header > input:checked ~ label span::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+/* Responsiveness */
+
+@media (min-width: 600px) {
+    body > header > nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    body > header > nav > ul li {
+        float: left;
+    }
+    
+    body > header > label {
+        display: none;
+    }
+
+}

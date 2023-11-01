@@ -1,0 +1,24 @@
+{
+    "name": "2d-sass",
+    "version": "1.0.0",
+    "description": "Basic template with Eleventy, LiquidJS & Sass processing",
+    "main": "eleventy.config.js",
+    "scripts": {
+        "watch:eleventy": "npx @11ty/eleventy --serve",
+        "watch:sass": "npx sass src/sass:_site/assets/css --watch",
+        "start": "npm run watch:eleventy & npm run watch:sass",
+        "build": "sass src/sass:_site/assets/css --style=compressed && eleventy",
+        "debug": "DEBUG=* eleventy"
+    },
+    "keywords": [
+        "eleventy",
+        "liquidjs",
+        "sass"
+    ],
+    "author": "Michel Maillard",
+    "license": "ISC",
+    "dependencies": {
+        "@11ty/eleventy": "^2.0.1",
+        "sass": "^1.69.0"
+    }
+}
