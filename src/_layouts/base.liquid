@@ -6,28 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}} - {{site.description}} ({{site.name}})</title>
     <link rel="stylesheet" href="assets/css/{{site.css}}">
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
     {% include 'header' %}
     <main>
         <h1>{{ title }}</h1>
-        <blockquote>{{ description }}</blockquote>
+        <p>{{ description }}</p>
         {{ content }}
     </main>
     {% include 'footer' %}
-    <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>
