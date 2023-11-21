@@ -8,15 +8,8 @@
     <link rel="stylesheet" href="/assets/css/{{site.css}}">
     <link rel="stylesheet" href="/assets/css/{{css}}">
 </head>
-
-<body class="{{className}}">
-    {% include 'header' %}
-    <main>
-        <h1>{{ title }}</h1>
-        <p>{{ description }}</p>
+<body id="{{idName}}">
         {{ content }}
-    </main>
-    {% include 'footer' %}
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 {
-    "name": "2d-sass",
-    "description": "Basic template with Eleventy, LiquidJS & Sass processing",
+    "name": "layouts-flexbox",
+    "description": "Flexbox Layouts with Sass processing",
     "url": "",
     "authorName": "Michel Maillard",
     "authorUrl": "https://michelmaillard.ch/",

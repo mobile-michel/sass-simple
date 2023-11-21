@@ -1,8 +1,9 @@
 ---
 title: Welcome
-description: Basic template with Eleventy, LiquidJS & Sass processing.
+description: Flexbox Layouts with Sass processing.
 layout: base
-tags: primary
 ---
+[Learn CSS Flexbox by Building 5 Responsive Layouts](https://www.freecodecamp.org/news/learn-flexbox-build-5-layouts/)
 
-The first paragraph with **{{layout}}** layout.
+![Flexbox Architecture](assets/images/flexbox-architecture.png)
+![Flexbox Chart](assets/images/flexbox-chart.png)

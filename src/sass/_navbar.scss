@@ -54,7 +54,7 @@ body {
 
 [aria-label="Main"]>ul a {
   display: block;
-  padding: 30px;
+  padding: 30px 10px;
   color: var(--white);
   text-decoration: none;
 }
@@ -130,7 +130,7 @@ body {
 }
 
 /* Responsiveness */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   [aria-label="Main"] {
     max-height: none;
     top: 0;
