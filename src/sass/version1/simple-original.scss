@@ -1,0 +1,27 @@
+/************************************/
+/* Simple.css v2.2.1 - May 17, 2023 */
+/************************************/
+
+@import 'variables';
+@import 'reset';
+@import 'base';
+@import 'layout';
+@import 'typography';
+@import 'buttons';
+@import 'navs';
+@import 'layout';
+@import 'interactivity';
+@import 'table';
+@import 'forms';
+@import 'media';
+@import 'blocks';
+@import 'code';
+
+/* Classes for notices */
+.notice {
+    background: var(--accent-bg);
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}

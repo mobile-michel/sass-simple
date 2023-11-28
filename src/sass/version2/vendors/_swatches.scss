@@ -1,0 +1,158 @@
+@function complementaryColor($hue) {
+    @return $hue + 180;
+}
+
+@function rightAnalogousColor($hue) {
+    @return $hue + 30;
+}
+
+@function leftAnalogousColor($hue) {
+    @return $hue - 30;
+}
+
+$hue: 200;
+$hueComplement: complementaryColor($hue);
+$hueRightAnalogous: rightAnalogousColor($hue);
+$hueLeftAnalogous: leftAnalogousColor($hue);
+
+$colors: (
+    primary: hsl($hue 25% 95%),
+    primaryDark500: hsl($hue 20% 85%),
+    primaryDark600: hsl($hue 20% 75%),
+    secondary: hsl($hueComplement 5% 25%),
+    secondaryLight500: hsl($hueComplement 5% 30%),
+    secondaryLight900: hsl($hueComplement 5% 95%),
+    secondaryDark500: hsl($hueComplement 5% 20%),
+    accentV1: hsl($hueRightAnalogous 40% 40%),
+    accentV1Light900: hsl($hueRightAnalogous 40% 95%),
+    accentV2: hsl($hueLeftAnalogous 40% 40%),
+    accentV2Light900: hsl($hueLeftAnalogous 40% 90%)
+);
+
+body {
+    font: 1em/160% Inter, sans-serif;
+    background-color: map-get($colors, primary);
+    color: map-get($colors, secondary);
+}
+
+a {
+    color: map-get($colors, accentV1);
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: map-get($colors, accentV2);
+    }
+}
+
+p {
+    &:not(:last-child) {
+        margin-bottom: 1.5em;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 120%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-family: Nunito, sans-serif;
+    color: map-get($colors, secondaryDark500);
+}
+
+h1 {
+    font-size: 160%;
+}
+
+h2 {
+    font-size: 140%;
+}
+
+h3 {
+    font-size: 120%;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 600px;
+    padding: 2em;
+}
+
+.cp-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2em;
+}
+
+.cp-grid-col-full {
+    grid-column: 1 / 3;
+}
+
+.cp-grid-label {
+    font-size: 0.75em;
+    font-family: Nunito, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: map-get($colors, secondaryLight500);
+}
+
+.cp-widget {
+    &:not(:last-child) {
+        padding-bottom: 2em;
+        border-bottom: 1px solid map-get($colors, primaryDark500);
+    }
+}
+
+.cp-box {
+    padding: 1.5em;
+    background-color: map-get($colors, primaryDark500);
+    border: 1px solid map-get($colors, primaryDark600);
+    border-radius: 0.25em;
+
+    &.cp-box--dark {
+        background-color: map-get($colors, secondaryLight500);
+        color: map-get($colors, secondaryLight900);
+        border: 1px solid map-get($colors, secondary);
+    }
+}
+
+.cp-btn {
+    padding: 1em 1.5em;
+    display: inline-flex;
+    margin: 1em 0;
+    background-color: map-get($colors, accentV1);
+    color: map-get($colors, accentV1Light900);
+    border-radius: 0.25em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: map-get($colors, accentV2);
+        color: map-get($colors, accentV2Light900);
+    }
+}
+
+#swatches {
+    padding: 0.25em;
+    border: 1px solid map-get($colors, primaryDark500);
+    border-radius: 0.25em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+
+    div {
+        height: 30px;
+
+        @each $label, $color in $colors {
+            $i: index($colors, ($label $color));
+
+            &:nth-child(#{$i}) {
+                background-color: $color;
+            }
+        }
+    }
+}

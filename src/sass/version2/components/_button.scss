@@ -1,0 +1,58 @@
+  
+  button,
+  .button,
+  a.button, /* extra specificity to override a */
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  label[type="button"] {
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    color: var(--bg);
+    padding: 0.5rem 0.9rem;
+    text-decoration: none;
+    line-height: normal;
+  }
+  
+  .button[aria-disabled="true"], 
+  input:disabled,
+  textarea:disabled,
+  select:disabled,
+  button[disabled] {
+    cursor: not-allowed;
+    background-color: var(--disabled);
+    border-color: var(--disabled);
+    color: var(--text-light);
+  }
+  
+  input[type="range"] {
+    padding: 0;
+  }
+  
+  /* Set the cursor to '?' on an abbreviation and style the abbreviation to show that there is more information underneath */
+  abbr[title] {
+    cursor: help;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
+  
+  button:enabled:hover,
+  .button:not([aria-disabled="true"]):hover,
+  input[type="submit"]:enabled:hover,
+  input[type="reset"]:enabled:hover,
+  input[type="button"]:enabled:hover,
+  label[type="button"]:hover {
+    filter: brightness(1.4);
+    cursor: pointer;
+  }
+  
+  .button:focus-visible,
+  button:focus-visible:where(:enabled),
+  input:enabled:focus-visible:where(
+    [type="submit"],
+    [type="reset"],
+    [type="button"]
+  ) {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }

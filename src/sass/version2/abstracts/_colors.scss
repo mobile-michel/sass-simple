@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains the color variables.
+// -----------------------------------------------------------------------------
+
+:root {
+    --hue: 180;
+    --hueComplement: calc(var(--hue) + 180);
+    --hueRightAnalogous: calc(var(--hue) + 30);
+    --hueLeftAnalogous: calc(var(--hue) - 30);
+    
+    --primary100: hsl(var(--hue) 25% 90%);
+    --primary200: hsl(var(--hue) 25% 80%);
+    --primary300: hsl(var(--hue) 25% 70%);
+    --primary400: hsl(var(--hue) 25% 60%);
+    --primary500: hsl(var(--hue) 25% 50%);
+    --secondary500: hsl(var(--hueComplement) 5% 55%);
+    --secondary600: hsl(var(--hueComplement) 5% 45%);
+    --secondary700: hsl(var(--hueComplement) 5% 35%);
+    --secondary800: hsl(var(--hueComplement) 5% 25%);
+    --secondary900: hsl(var(--hueComplement) 5% 15%);
+    --accent600: hsl(var(--hueRightAnalogous) 40% 40%);
+    --accentV1Light900: hsl(var(--hueRightAnalogous) 40% 95%);
+    --accentV2: hsl(var(--hueLeftAnalogous) 40% 40%);
+    --accentV2Light900: hsl(var(--hueLeftAnalogous) 40% 90%);
+
+    --background-color: var(--primary100);
+    --text-color: var(--secondary900);
+    --link-color: var(--accent600);
+    --link-color-hover: var(--accentV2);
+}

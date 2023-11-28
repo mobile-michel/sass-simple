@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ site.authorName }}">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml">
+    <title>{{ title }} - {{ site.name }}</title>
+    <link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
+  </head>
+  <body>
+    {% include 'header' %}
+    <main class="container">
+      <h1>{{ title }}</h1>
+      <blockquote>{{ description }}</blockquote>
+      {{ content }}
+    </main>
+    {% include 'footer' %}
+    <script src="/assets/js/{{ javascript }},js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+/* Global variables. */
+:root, html[data-theme='light'] {
+    /* Set sans-serif & mono fonts */
+    --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+      "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+      "Helvetica Neue", sans-serif;
+    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    --standard-border-radius: 5px;
+  
+    /* Set colors */
+    --hue: 210;
+    --hueComplement: calc(var(--hue) + 180);
+    --hueRightAnalogous: calc(var(--hue) + 30);
+    --hueLeftAnalogous: calc(var(--hue) - 30);
+    
+    --primary: hsl(var(--hue) 25% 95%);
+    --primaryDark500: hsl(var(--hue) 20% 85%);
+    --primaryDark600: hsl(var(--hue) 20% 75%);
+    --secondary: hsl(var(--hueComplement) 5% 25%);
+    --secondaryLight500: hsl(var(--hueComplement) 5% 30%);
+    --secondaryLight900: hsl(var(--hueComplement) 5% 95%);
+    --secondaryDark500: hsl(var(--hueComplement) 5% 20%);
+    --accentV1: hsl(var(--hueRightAnalogous) 40% 40%);
+    --accentV1Light900: hsl(var(--hueRightAnalogous) 40% 95%);
+    --accentV2: hsl(var(--hueLeftAnalogous) 40% 40%);
+    --accentV2Light900: hsl(var(--hueLeftAnalogous) 40% 90%);
+  }
+  
+    /* Light theme */
+  html[data-theme='light'] {
+    --bg: var(--primary);
+    --accent-bg: var(--primaryDark500);
+    --text: var(--secondary);
+    --text-light: var(--secondaryDark500);
+    --border: var(--secondaryLight500);
+    --accent: var(--accentV1);
+    --code: #d81b60;
+    --preformatted: #444;
+    --marked: #ffdd33;
+    --disabled: #efefef;
+  }
+  
+  /* Dark theme */
+  html[data-theme='dark'] {
+      --bg: var(--secondaryDark500);
+      --accent-bg: var(--primaryDark600);
+      --text: var(--primary);
+      --text-light: #ababab;
+      --accent: var(--accentV1);
+      --code: #f06292;
+      --preformatted: #ccc;
+      --disabled: #111;
+  }

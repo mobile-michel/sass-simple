@@ -1,0 +1,24 @@
+  
+  details {
+    padding: 0.7rem 1rem;
+  }
+  
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.7rem 1rem;
+    margin: -0.7rem -1rem;
+    word-break: break-all;
+  }
+  
+  details[open] > summary + * {
+    margin-top: 0;
+  }
+  
+  details[open] > summary {
+    margin-bottom: 0.5rem;
+  }
+  
+  details[open] > :last-child {
+    margin-bottom: 0;
+  }

@@ -1,0 +1,16 @@
+dialog {
+    max-width: 40rem;
+    margin: auto;
+  }
+  
+  dialog::backdrop {
+    background-color: var(--bg);
+    opacity: 0.8;
+  }
+  
+  @media only screen and (max-width: 720px) {
+    dialog {
+      max-width: 100%;
+      margin: auto 1em;
+    }
+  }

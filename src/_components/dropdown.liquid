@@ -1,0 +1,18 @@
+<header>
+  <nav aria-label="dropdown">
+    <ul>
+      {% for nav in collections.primary reversed %}
+        <li {% if page.url == nav.url %}aria-current="page"{% endif %}>
+          <a href="{{ nav.url }}">{{ nav.data.title }}</a>
+            {% if nav.data.title == "Typography" %}
+            <ul>
+              {% for nav in collections.typography %}
+                <li><a href="{{ nav.url }}">{{ nav.data.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

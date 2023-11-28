@@ -1,0 +1,14 @@
+---
+title: Typography
+description: These are all the typographic HTML elements.
+layout: elements
+stylesheet: simple
+tags: primary
+---
+<ul>
+  {% for nav in collections.typography reversed %}
+    <li {% if page.url == nav.url %}aria-current="page"{% endif %}>
+      <a href="{{ nav.url }}">{{ nav.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

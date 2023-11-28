@@ -1,0 +1,111 @@
+/* Format headers */
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+    margin-top: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+h4 {
+    font-size: 1.44rem;
+}
+
+h5 {
+    font-size: 1.15rem;
+}
+
+h6 {
+    font-size: 0.96rem;
+}
+
+p {
+    margin: 1.5rem 0;
+}
+
+/* Prevent long strings from overflowing container */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Fix line height when title wraps */
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+/* Reduce header size on mobile */
+@media only screen and (max-width: 720px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2.1rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Format links & buttons */
+a,
+a:visited {
+    color: var(--accent);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Set the cursor to '?' on an abbreviation and style the abbreviation to show that there is more information underneath */
+abbr[title] {
+    cursor: help;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+mark {
+    padding: 2px 5px;
+    border-radius: var(--standard-border-radius);
+    background-color: var(--marked);
+    color: black;
+}
+
+mark a {
+    color: #0d47a1;
+}
+
+/* Superscript & Subscript */
+/* Prevent scripts from affecting line-height. */
+sup,
+sub {
+    vertical-align: baseline;
+    position: relative;
+}
+
+sup {
+    top: -0.4em;
+}
+
+sub {
+    top: 0.3em;
+}

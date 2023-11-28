@@ -1,0 +1,35 @@
+---
+title: Select menus
+description: Represents a control that provides a menu of options.
+layout: elements
+stylesheet: simple
+tags: form
+---
+{% layout "article.liquid" %}
+{% block %}
+  <form>
+    <fieldset id="forms__select">
+      <legend>Select menus</legend>
+      <p>
+        <label for="select">Select</label>
+        <select id="select">
+          <optgroup label="Option Group">
+            <option>Option One</option>
+            <option>Option Two</option>
+            <option>Option Three</option>
+          </optgroup>
+        </select>
+      </p>
+      <p>
+        <label for="select_multiple">Select (multiple)</label>
+        <select id="select_multiple" multiple="multiple">
+          <optgroup label="Option Group">
+            <option>Option One</option>
+            <option>Option Two</option>
+            <option>Option Three</option>
+          </optgroup>
+        </select>
+      </p>
+    </fieldset>
+  </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+/* Make the header bg full width, but the content inline with body */
+body > header {
+  background-color: var(--accent-bg);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  padding: 0 0.5rem 2rem 0.5rem;    grid-column: 1 / -1;
+  }
+  
+  body > header h1 {
+    max-width: 1200px;
+    margin: 1rem auto;
+  }
+  
+  body > header p {
+    max-width: 40rem;
+    margin: 1rem auto;
+}

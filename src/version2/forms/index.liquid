@@ -1,0 +1,14 @@
+---
+title: Forms
+description: Represents a document section containing interactive controls for submitting information.
+layout: elements
+stylesheet: simple
+tags: primary
+---
+<ul>
+  {% for nav in collections.form reversed %}
+    <li {% if page.url == nav.url %}aria-current="page"{% endif %}>
+      <a href="{{ nav.url }}">{{ nav.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
