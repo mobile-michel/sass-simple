@@ -1,5 +1,5 @@
 {
-    "layout": "base-flex",
-    "tags": "primary",
+    "layout": "freecodecamp",
+    "tags": "freecodecamp",
     "css": "flexbox.css"
 }

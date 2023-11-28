@@ -1,16 +1,10 @@
 {
-<<<<<<< Updated upstream
-    "name": "layouts-flexbox",
-    "description": "Flexbox Layouts with Sass processing",
-    "url": "",
-=======
     "name": "Sass",
     "description": "Flux de travail Sass pour Simple.css",
->>>>>>> Stashed changes
     "authorName": "Michel Maillard",
     "authorUrl": "https://michelmaillard.ch/",
     "github": "https://github.com/mobile-michel/2c-sass-simple",
     "favicon": "https://11ty.recipes/images/meta/favicon.svg",
-    "css": "/assets/css/simple.css",
-    "backgroundImage": "hhttps://images.pexels.com/photos/14702039/pexels-photo-14702039.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1"
+    "css": "style.css",
+    "backgroundImage": "https://images.pexels.com/photos/14702039/pexels-photo-14702039.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1"
 }

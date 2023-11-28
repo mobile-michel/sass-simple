@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/dark-mode/{{ css }}">
+    <title>Dark Theme Toggler CSS</title>
+  </head>
+  <body>
+    {% include 'dark-mode/header' %}
+    <div class="container">
+      <h1>{{ title }}</h1>
+      <div class="toggle-container">
+        <input type="checkbox" id="switch" /><label for="switch">Dark Mode</label>
+      </div>
+      {{ content }}
+    </div>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

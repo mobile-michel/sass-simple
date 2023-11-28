@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
             output: "_site", // This is the default
             includes: "_components", // All UI partials
             layouts: "_layouts" // Base page layouts
-        }
-    }
-}
+        },
+        templateFormats: ["html", "md", "liquid"]
+    };
+};
