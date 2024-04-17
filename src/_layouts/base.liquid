@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}} - {{site.description}} ({{site.name}})</title>
-    <link rel="stylesheet" href="/assets/css/{{site.css}}">
-    <link rel="stylesheet" href="/assets/css/{{css}}">
+    <link rel="stylesheet" href="{{ site.css | url }}">
+    <link rel="stylesheet" href="{{ css | url }}">
 </head>
 
 <body class="{{className}}">
