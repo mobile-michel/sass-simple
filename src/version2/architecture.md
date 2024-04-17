@@ -2,7 +2,7 @@
 title: 7-1 Pattern
 description: Seven different folders and a single file at the root level
 layout: base-v2
-css: version2/simple.css
+css: /assets/css/version2/simple.css
 tags: version2
 ---
 ## 1. Abstracts

@@ -8,6 +8,7 @@
         "watch:sass": "npx sass src/sass:_site/assets/css --watch",
         "start": "npm run watch:eleventy & npm run watch:sass",
         "build": "sass src/sass:_site/assets/css --style=compressed && eleventy",
+        "build-gp": "sass src/sass:_site/assets/css --style=compressed && eleventy --pathprefix='sass-simple'",
         "debug": "DEBUG=* eleventy"
     },
     "keywords": [
@@ -19,6 +20,6 @@
     "license": "ISC",
     "dependencies": {
         "@11ty/eleventy": "^2.0.1",
-        "sass": "^1.69.0"
+        "sass": "^1.75.0"
     }
 }

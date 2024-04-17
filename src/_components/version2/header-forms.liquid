@@ -1,11 +1,11 @@
 <header role="banner">
-    <a href="/">Home</a>
+    <a href="{{ '/' | url }}">Home</a>
     <input type="checkbox" id="side-menu">
     <label for="side-menu"><span></span></label>
     <nav aria-label="Main">
         <ul>
             {% for nav in collections.forms reversed %}
-            <li{% if page.url==nav.url %} aria-current="page" {% endif %}><a href="{{ nav.url }}">{{ nav.data.title }}</a></li>
+            <li{% if page.url==nav.url %} aria-current="page" {% endif %}><a href="{{ nav.url | url }}">{{ nav.data.title }}</a></li>
             {% endfor %}
         </ul>
     </nav>

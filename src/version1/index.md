@@ -2,7 +2,7 @@
 title: Version 1
 description: Simple.css with Sass processing
 layout: base-v1
-css: version1/simple-original.css
+css: /assets/css/version1/simple-original.css
 tags: primary
 ---
 # {{title}}

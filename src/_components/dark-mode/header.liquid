@@ -3,12 +3,12 @@
     <ul>
       {% for nav in collections.dark-mode %}
         <li {% if page.url == nav.url %}class="current"{% endif %}>
-          <a href="{{ nav.url }}" style="color: white;">{{ nav.data.title }}</a>
+          <a href="{{ nav.url | url }}" style="color: white;">{{ nav.data.title }}</a>
         </li>
       {% endfor %}
       <li>
         <button id="theme-toggle">
-          <span class="d-block-dark"><img src="/assets/images/dark-mode.png" alt="dark mode"></span>
+          <span class="d-block-dark"><img src="{{ '/assets/images/dark-mode.png' | url }}" alt="dark mode"></span>
         </button>
       </li>
     </ul>

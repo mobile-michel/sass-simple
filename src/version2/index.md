@@ -2,7 +2,7 @@
 title: Version 2
 description: A Sass workflow
 layout: base-v2
-css: version2/simple-sass.css
+css: /assets/css/version2/simple-sass.css
 tags: primary
 ---
 ## Simple.css Framework Sections

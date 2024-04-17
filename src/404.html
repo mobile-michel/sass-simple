@@ -8,12 +8,12 @@ permalink: 404.html
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - {{ site.name }}</title>
-    <link rel="stylesheet" href="{{ site.css }}">
+    <link rel="stylesheet" href="{{ site.css | url }}">
 </head>
 <body>
     <main class="container">
         <h1>{{ title }}</h1>
-        <p>You may find something on the <a href="/">home page</a>...</p>
+        <p>You may find something on the <a href="{{ '/' | url }}">home page</a>...</p>
     </main>
 </body>
 </html>
